@@ -30,7 +30,7 @@ if [ ! -d "./utils/puppet-masterless/.git" ];
 then
   cd "./utils"
   rm -fr puppet-masterless
-  git clone https://github.com/jordiprats/puppet-masterless
+  git clone https://github.com/NTTCom-MS/bash-puppetmasterless.git
 else
   cd "./utils/puppet-masterless"
   git pull origin master
