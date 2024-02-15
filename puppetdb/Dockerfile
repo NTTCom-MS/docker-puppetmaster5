@@ -36,7 +36,7 @@ RUN yum install epel-release -y
 # puppet-masterless
 #
 RUN mkdir -p /opt
-RUN bash -c 'cd /opt; git clone https://github.com/jordiprats/puppet-masterless'
+RUN bash -c 'cd /opt; git clone https://github.com/NTTCom-MS/bash-puppetmasterless.git'
 
 #
 # puppet repo & agent & r10k
