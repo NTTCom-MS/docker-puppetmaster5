@@ -34,7 +34,7 @@ RUN yum install epel-release -y
 # puppet-masterless
 #
 RUN mkdir -p /opt
-RUN bash -c 'cd /opt; git clone https://github.com/NTTCom-MS/bash-puppetmasterless.git'
+RUN bash -c 'cd /opt; git clone https://github.com/NTTCom-MS/bash-puppetmasterless.git puppet-masterless'
 
 #
 # puppet repo & agent & r10k
@@ -49,21 +49,21 @@ RUN bash -c 'cd /opt; git clone https://github.com/NTTCom-MS/bash-puppetmasterle
 #RUN /usr/bin/gem install jwt -v 1.5.6
 #RUN /usr/bin/gem install r10k -v 3.0.0
 
-RUN /bin/bash /opt/bash-puppetmasterless/setup.sh
+RUN /bin/bash /opt/puppet-masterless/setup.sh
 
 #
 # postgres install
 #
 
 # https://github.com/NTTCom-MS/eyp-postgresql
-RUN /opt/bash-puppetmasterless/localpuppetmaster.sh -d /tmp/postgres -r https://github.com/NTTCom-MS/eyp-postgresql
+RUN /opt/puppet-masterless/localpuppetmaster.sh -d /tmp/postgres -r https://github.com/NTTCom-MS/eyp-postgresql
 COPY postgres.pp /usr/local/src/postgres.pp
 
 #
 # postgres install
 #
 
-RUN /opt/bash-puppetmasterless/localpuppetmaster.sh -d /tmp/postgres -s /usr/local/src/postgres.pp
+RUN /opt/puppet-masterless/localpuppetmaster.sh -d /tmp/postgres -s /usr/local/src/postgres.pp
 
 #
 # puppetDB install
