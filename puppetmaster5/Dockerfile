@@ -52,7 +52,8 @@ RUN yum install puppetserver -y
 RUN yum install epel-release -y
 RUN yum install yamllint -y
 
-RUN /opt/puppetlabs/puppet/bin/gem install r10k
+RUN /opt/puppetlabs/puppet/bin/gem install jwt -v 1.5.6
+RUN /opt/puppetlabs/puppet/bin/gem install r10k -v 3.0.0
 
 # puppetdb support
 RUN yum install puppetdb-terminus -y
