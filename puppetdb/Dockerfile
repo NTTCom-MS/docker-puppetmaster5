@@ -42,7 +42,7 @@ RUN bash -c 'cd /opt; git clone https://github.com/NTTCom-MS/bash-puppetmasterle
 
 #RUN rpm -Uvh https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm
 #RUN yum install puppet-agent -y
-#RUN /usr/bin/gem install cri -v 2.8.0
+#RUN /usr/bin/gem install cri -v 2.15.10
 #RUN /usr/bin/gem install multipart-post -v 2.2.0
 #RUN /usr/bin/gem install fast_gettext -v 1.1.0
 #RUN /usr/bin/gem install semantic_puppet -v 1.0.4
