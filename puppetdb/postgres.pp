@@ -3,7 +3,7 @@ class { 'postgresql':
   max_wal_senders     => '0',
   checkpoint_segments => '8',
   wal_keep_segments   => '1',
-  version             => '11',
+  version             => '12',
   manage_service      => false,
 }
 
