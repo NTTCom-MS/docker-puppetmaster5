@@ -79,7 +79,7 @@ then
 
   chown puppet.puppet /etc/puppetlabs/puppetserver
   chmod 0750 /etc/puppetlabs/puppetserver
-  chown -R puppet. /etc/puppetlabs/puppet
+  chown puppet. -R /etc/puppetlabs/puppet
   
   chmod 0755 /etc/puppetlabs/code \
              /etc/puppetlabs/mcollective \
