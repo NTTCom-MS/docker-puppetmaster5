@@ -79,8 +79,8 @@ then
 
   chown puppet.puppet /etc/puppetlabs/puppetserver
   chmod 0750 /etc/puppetlabs/puppetserver
-  chmod 0755 /etc/puppetlabs/puppetserver/*.xml
-
+  chown -R puppet. /etc/puppetlabs/puppet
+  
   chmod 0755 /etc/puppetlabs/code \
              /etc/puppetlabs/mcollective \
              /etc/puppetlabs/puppet \
