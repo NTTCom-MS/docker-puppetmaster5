@@ -57,7 +57,7 @@ RUN /opt/puppetlabs/puppet/bin/gem install  multipart-post -v 2.2.0
 RUN /opt/puppetlabs/puppet/bin/gem install fast_gettext -v 1.1.0
 RUN /opt/puppetlabs/puppet/bin/gem  install semantic_puppet -v 1.0.4
 RUN /opt/puppetlabs/puppet/bin/gem install jwt -v 1.5.6
-RUN /opt/puppetlabs/puppet/bin/gem install r10k -v 3.0.0
+RUN /opt/puppetlabs/puppet/bin/gem install r10k -v 2.3.0
 
 # puppetdb support
 RUN yum install puppetdb-terminus -y
