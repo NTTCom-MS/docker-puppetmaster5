@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PGDATA=/var/lib/pgsql/11/data
+PGDATA=/var/lib/pgsql/12/data
 
-su - postgres -c "/usr/pgsql-11/bin/postmaster -D ${PGDATA}" &
+su - postgres -c "/usr/pgsql-12/bin/postmaster -D ${PGDATA}" &
 
 for i in $(seq 1 60);
 do
